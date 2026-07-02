@@ -320,7 +320,7 @@ function overviewContent() {
 
 const map = L.map('map', { center: [HOTEL.lat || 35.69, HOTEL.lng || 139.74], zoom: 12, zoomControl: false, attributionControl: true });
 L.control.zoom({ position: 'topright' }).addTo(map);
-L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', { maxZoom: 19 }).addTo(map);
+L.tileLayer('https://webrd0{s}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}', { subdomains: ['1','2','3','4'], maxZoom: 18, attribution: '&copy; 高德地图' }).addTo(map);
 
 /* ── Geolocation ── */
 const LocateControl = L.Control.extend({
