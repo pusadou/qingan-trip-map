@@ -237,49 +237,47 @@ a:hover { text-decoration: underline; }
 // ║  REPLACE THIS SECTION — Hotel and Days data                 ║
 // ╚══════════════════════════════════════════════════════════════╝
 
-const HOTEL = { name: '西宁市区（D1/D5 住宿）', lat: 36.6197, lng: 101.7783 };
+const HOTEL = { name: '西宁市区（D1/D5 住宿·莫家街一带）', lat: 36.619537, lng: 101.786417 };
 
 const DAYS = [
   { id: 0, label: '总览', color: '#0071e3', locations: [] },
   { id: 1, label: 'D1', date: '7/5 周日', title: '抵西宁 · 塔尔寺', color: '#ff9500', locations: [
-    { name: '西宁曹家堡机场 T3（成都党抵达）', lat: 36.5275, lng: 102.0356, type: 'transport', time: '09:15', desc: '国航 CA2593 天府 07:40 起飞', detail: '3 人抵达。凌晨 4 点起，5:30 到天府机场' },
-    { name: '曹家堡机场（接遵义朋友）', lat: 36.5275, lng: 102.0356, type: 'transport', time: '12:15', desc: '天航 GS6454 贵阳 10:10 起飞', detail: '遵义→贵阳北 06:00 高铁' },
-    { name: '莫家街 · 马忠食府', lat: 36.6216, lng: 101.7893, type: 'food', time: '13:00', desc: '午饭 + 休整', detail: '手抓羊肉 + 酸奶 + 牛肉面。老字号回族小吃', budget: '¥30/人', pay: { cash: 1, alipay: 1, wechat: 1 } },
-    { name: '塔尔寺', lat: 36.4894, lng: 101.5769, type: 'spot', time: '15:00', desc: '藏传佛教六大寺之一', detail: '门票 70/人（学生半价 35）\\n建议 2-3 小时\\n禁忌：进殿脱帽、不拍佛像', budget: '¥35', dianpingKeyword: '塔尔寺' },
-    { name: '东关清真大寺', lat: 36.6231, lng: 101.7986, type: 'spot', time: '18:00', desc: '西北四大清真寺', detail: '免费。晚祷时间氛围最好' },
-    { name: '西宁 D1 住宿（火车站附近）', lat: 36.6197, lng: 101.7783, type: 'hotel', time: '21:00', desc: '早睡，D2 早出发', detail: '青旅/快捷酒店 60-100/床。推荐建国路一带', pay: { alipay: 1, wechat: 1 } }
+    { name: '西宁曹家堡机场 T3（成都党抵达）', lat: 36.599622, lng: 101.818575, type: 'transport', time: '09:15', desc: '国航 CA2593 天府 07:40 起飞', detail: '3 人抵达。凌晨 4 点起，5:30 到天府机场\\n☁️ 7/5 西宁多云转阴 31℃/15℃（高德实时预报）' },
+    { name: '曹家堡机场（接遵义朋友）', lat: 36.599622, lng: 101.818575, type: 'transport', time: '12:15', desc: '天航 GS6454 贵阳 10:10 起飞', detail: '遵义→贵阳北 06:00 高铁' },
+    { name: '莫家街 · 马忠食府', lat: 36.619537, lng: 101.786417, type: 'food', time: '13:00', desc: '午饭 + 休整', detail: '手抓羊肉 + 酸奶 + 牛肉面。老字号回族小吃', budget: '¥30/人', pay: { cash: 1, alipay: 1, wechat: 1 } },
+    { name: '塔尔寺', lat: 36.487524, lng: 101.567788, type: 'spot', time: '15:00', desc: '藏传佛教六大寺之一', detail: '门票 70/人（学生半价 35）\\n建议 2-3 小时\\n禁忌：进殿脱帽、不拍佛像', budget: '¥35', dianpingKeyword: '塔尔寺' },
+    { name: '东关清真大寺', lat: 36.615341, lng: 101.797493, type: 'spot', time: '18:00', desc: '西北四大清真寺', detail: '免费。晚祷时间氛围最好' },
+    { name: '西宁 D1 住宿（火车站/建国路一带）', lat: 36.619537, lng: 101.786417, type: 'hotel', time: '21:00', desc: '早睡，D2 早出发', detail: '青旅/快捷酒店 60-100/床', pay: { alipay: 1, wechat: 1 } }
   ]},
   { id: 2, label: 'D2', date: '7/6 周一', title: '青海湖 · 黑马河日落', color: '#007aff', locations: [
-    { name: '西宁出发', lat: 36.6197, lng: 101.7783, type: 'transport', time: '08:30', desc: '出发前加满油', detail: '西宁 → 黑马河 约 300km' },
-    { name: '拉脊山垭口', lat: 36.4194, lng: 101.4478, type: 'spot', time: '09:30', desc: '海拔 3820m 观景台', detail: '首个高海拔点，慢慢走' },
-    { name: '倒淌河镇', lat: 36.2691, lng: 100.5989, type: 'transport', time: '11:00', desc: '休整 + 加油', detail: '入湖前最后镇子' },
-    { name: '青海湖二郎剑景区', lat: 36.5744, lng: 100.7844, type: 'spot', time: '13:00', desc: '青海湖标志景点', detail: '⚠️ 门票 90/人（学生 45）\\n💡 从环湖公路能看同款美景，可不进省 360 元', budget: '¥45 或免费' },
-    { name: '黑马河日落观景台', lat: 36.7291, lng: 99.7889, type: 'spot', time: '19:30', desc: '⭐ 全程 highlight', detail: '19:00 前到位置，夏季日落约 20:15。带外套，有大风' },
-    { name: '黑马河 D2 住宿', lat: 36.7280, lng: 99.7900, type: 'hotel', time: '21:30', desc: '为看日出连住不搬', detail: '4 人订 2 间标间 80-150/间，或 1 间 4 人间。旺季提前订', pay: { cash: 1, alipay: 1, wechat: 1 } }
+    { name: '西宁出发', lat: 36.619537, lng: 101.786417, type: 'transport', time: '08:30', desc: '出发前加满油', detail: '西宁 → 黑马河 214km · 2h57min（高德实时）' },
+    { name: '拉脊山垭口', lat: 36.321887, lng: 101.550601, type: 'spot', time: '09:30', desc: '海拔 3820m 观景台', detail: '首个高海拔点，慢慢走' },
+    { name: '倒淌河', lat: 36.404773, lng: 100.967419, type: 'transport', time: '11:00', desc: '休整 + 加油', detail: '入湖前最后镇子' },
+    { name: '青海湖二郎剑景区', lat: 36.578633, lng: 100.495767, type: 'spot', time: '13:00', desc: '青海湖标志景点', detail: '⚠️ 门票 90/人（学生 45）\\n💡 从环湖公路能看同款美景，可不进省 4×90=360 元', budget: '¥45 或免费' },
+    { name: '黑马河日落观景台', lat: 36.734672, lng: 99.776545, type: 'spot', time: '19:30', desc: '⭐ 全程 highlight', detail: '19:00 前到位置，夏季日落约 20:15。带外套，有大风' },
+    { name: '黑马河 D2 住宿（观日之城附近）', lat: 36.734672, lng: 99.776545, type: 'hotel', time: '21:30', desc: '为看日出连住不搬', detail: '4 人订 2 间标间 80-150/间，或 1 间 4 人间。旺季提前订', pay: { cash: 1, alipay: 1, wechat: 1 } }
   ]},
   { id: 3, label: 'D3', date: '7/7 周二', title: '黑马河日出 · 茶卡盐湖', color: '#af52de', locations: [
-    { name: '黑马河日出', lat: 36.7291, lng: 99.7900, type: 'spot', time: '05:30', desc: '⭐⭐ 这趟最不能错过', detail: '5:00 起床，5:30 到湖边，日出约 6:20\\n外套 + 手套 + 保温杯' },
-    { name: '黑马河→茶卡途中', lat: 36.7300, lng: 99.3000, type: 'transport', time: '09:00', desc: '约 100km，2h', detail: '沿 G109 国道' },
-    { name: '茶卡盐湖', lat: 36.7369, lng: 99.0844, type: 'spot', time: '10:30', desc: '"天空之镜"', detail: '门票 60/人（学生 30）\\n💡 小火车 50 不建议买，走路即可\\n建议下午 2 点前离开避晒', budget: '¥30' },
-    { name: '茶卡镇午餐', lat: 36.7833, lng: 99.0839, type: 'food', time: '13:30', desc: '简单当地餐馆', detail: '选择少，推荐清真面馆' },
-    { name: '返程青海湖南岸', lat: 36.7300, lng: 100.1489, type: 'transport', time: '17:00', desc: '茶卡 → 江西沟约 4h', detail: '为 D4 去祁连缩短距离' },
-    { name: '江西沟 D3 住宿', lat: 36.7300, lng: 100.1489, type: 'hotel', time: '19:00', desc: '青海湖南岸', detail: '也可返黑马河连住，看车队偏好' }
+    { name: '黑马河日出', lat: 36.734672, lng: 99.776545, type: 'spot', time: '05:30', desc: '⭐⭐ 这趟最不能错过', detail: '5:00 起床，5:30 到湖边，日出约 6:20\\n外套 + 手套 + 保温杯' },
+    { name: '茶卡盐湖', lat: 36.759910, lng: 99.078336, type: 'spot', time: '10:30', desc: '"天空之镜"', detail: '84km · 1h32min（高德实时）\\n门票 60/人（学生 30）\\n💡 小火车 50 不建议\\n建议下午 2 点前离开避晒', budget: '¥30' },
+    { name: '茶卡镇午餐', lat: 36.793387, lng: 99.076943, type: 'food', time: '13:30', desc: '简单当地餐馆', detail: '选择少，推荐清真面馆' },
+    { name: '江西沟 D3 住宿', lat: 36.618719, lng: 100.277557, type: 'hotel', time: '19:00', desc: '青海湖南岸', detail: '茶卡→江西沟约 3h\\n也可返黑马河连住，看车队偏好' }
   ]},
-  { id: 4, label: 'D4', date: '7/8 周二', title: '祁连大草原 · 卓尔山', color: '#34c759', locations: [
-    { name: '江西沟出发', lat: 36.7300, lng: 100.1489, type: 'transport', time: '07:30', desc: '早出发，全天车程长', detail: '总里程约 300km，山路多' },
-    { name: '刚察县', lat: 37.3300, lng: 100.1300, type: 'transport', time: '10:00', desc: '青海湖北岸补给点', detail: '加油、买水、上厕所' },
-    { name: '大冬树山垭口', lat: 38.0333, lng: 100.2036, type: 'spot', time: '13:00', desc: '⚠️ 海拔 4120m，全程最高', detail: '停车拍照可，别激烈活动\\n风大，穿外套' },
-    { name: '祁连大草原', lat: 38.1500, lng: 100.2500, type: 'spot', time: '15:00', desc: '祁连山南麓草原', detail: '免费，沿路都能停\\n看到牦牛群可下车拍照' },
-    { name: '卓尔山', lat: 38.1900, lng: 100.2308, type: 'spot', time: '17:00', desc: '"东方小瑞士"', detail: '门票 60/人（学生 30）\\n傍晚光线最好', budget: '¥30' },
-    { name: '祁连县 D4 住宿', lat: 38.1794, lng: 100.2444, type: 'hotel', time: '19:30', desc: '尝牦牛酸奶', detail: '客栈 100-150/间\\n必尝：牦牛酸奶 + 手抓羊肉', pay: { cash: 1, alipay: 1, wechat: 1 } }
+  { id: 4, label: 'D4', date: '7/8 周三', title: '祁连大草原 · 卓尔山', color: '#34c759', locations: [
+    { name: '江西沟出发', lat: 36.618719, lng: 100.277557, type: 'transport', time: '07:30', desc: '早出发', detail: '江西沟 → 祁连县 296km · 4h13min（高德实时，两人轮流开）' },
+    { name: '刚察县', lat: 37.325096, lng: 100.145662, type: 'transport', time: '10:00', desc: '青海湖北岸补给点', detail: '加油、买水、上厕所' },
+    { name: '大冬树山垭口', lat: 38.014981, lng: 100.240495, type: 'spot', time: '13:00', desc: '⚠️ 海拔 4120m，全程最高', detail: '停车拍照可，别激烈活动\\n风大，穿外套' },
+    { name: '祁连大草原', lat: 38.177112, lng: 100.253211, type: 'spot', time: '15:00', desc: '祁连山南麓草原', detail: '免费，沿路都能停\\n看到牦牛群可下车拍照' },
+    { name: '卓尔山景区', lat: 38.195973, lng: 100.275816, type: 'spot', time: '17:00', desc: '"东方小瑞士"', detail: '门票 60/人（学生 30）\\n傍晚光线最好', budget: '¥30' },
+    { name: '祁连县 D4 住宿', lat: 38.177112, lng: 100.253211, type: 'hotel', time: '19:30', desc: '尝牦牛酸奶', detail: '客栈 100-150/间\\n必尝：牦牛酸奶 + 手抓羊肉', pay: { cash: 1, alipay: 1, wechat: 1 } }
   ]},
-  { id: 5, label: 'D5', date: '7/9 周三', title: '门源花海 · 返西宁', color: '#ff2d55', locations: [
-    { name: '祁连县出发', lat: 38.1794, lng: 100.2444, type: 'transport', time: '08:00', desc: '早出发，赶花海最美时段' },
-    { name: '大坂山垭口', lat: 37.1225, lng: 101.5111, type: 'spot', time: '11:00', desc: '祁连→门源必经', detail: '海拔 3792m\\n能看祁连山脉全景' },
-    { name: '门源油菜花海', lat: 37.4139, lng: 101.6250, type: 'spot', time: '12:30', desc: '⭐ 7 月初正花期', detail: '免费！沿 227 国道随时停车拍照\\n中午光线最好' },
-    { name: '门源浩门镇午餐', lat: 37.3831, lng: 101.6244, type: 'food', time: '14:30', desc: '青海本地简餐', detail: '推荐：青稞面、酿皮、老酸奶' },
-    { name: '西宁租车公司还车', lat: 36.6197, lng: 101.7783, type: 'transport', time: '17:30', desc: '⚠️ 加满油还', detail: '还车前先绕停车场检查划痕\\n加油站选公司指定的' },
-    { name: '西宁 D5 住宿（近机场/高铁）', lat: 36.6197, lng: 101.7783, type: 'hotel', time: '19:30', desc: '休整，返程待定', detail: '住机场附近或西宁站附近\\n为次日 7/10 走做准备' }
+  { id: 5, label: 'D5', date: '7/9 周四', title: '门源花海 · 返西宁', color: '#ff2d55', locations: [
+    { name: '祁连县出发', lat: 38.177112, lng: 100.253211, type: 'transport', time: '08:00', desc: '早出发', detail: '祁连 → 门源花海 145km · 1h56min（高德实时）' },
+    { name: '大坂山（大板山）', lat: 37.153405, lng: 101.902178, type: 'spot', time: '11:00', desc: '祁连→门源途径', detail: '海拔较高，能看祁连山脉全景' },
+    { name: '门源花海 1314 观景台', lat: 37.501907, lng: 101.415932, type: 'spot', time: '12:30', desc: '⭐ 7 月初正花期', detail: '免费！百里油菜花海景区\\n中午光线最好' },
+    { name: '门源浩门镇午餐', lat: 37.376535, lng: 101.623978, type: 'food', time: '14:30', desc: '青海本地简餐', detail: '推荐：青稞面、酿皮、老酸奶' },
+    { name: '西宁租车公司还车', lat: 36.619537, lng: 101.786417, type: 'transport', time: '17:30', desc: '⚠️ 加满油还', detail: '门源→西宁 147km · 1h52min（高德实时）\\n先绕停车场检查划痕' },
+    { name: '西宁 D5 住宿', lat: 36.619537, lng: 101.786417, type: 'hotel', time: '19:30', desc: '休整，返程待定', detail: '住机场附近或西宁站附近' }
   ]}
 ];
 
@@ -293,8 +291,8 @@ function overviewContent() {
 <div class="info-grid">
   <div class="info-card"><div class="label">住宿</div><div class="value">D1/D5 西宁 · D2 黑马河 · D3 江西沟 · D4 祁连</div></div>
   <div class="info-card"><div class="label">去程航班</div><div class="value">CA2593 成都¥390 · GS6454 贵阳¥320</div></div>
-  <div class="info-card"><div class="label">自驾</div><div class="value">西宁本地取车还车 · SUV × 6 天</div></div>
-  <div class="info-card"><div class="label">人均预算</div><div class="value">¥2,500 – 3,200（不含返程）</div></div>
+  <div class="info-card"><div class="label">自驾</div><div class="value">总里程 886km · 车程 12.5h（高德实时）</div></div>
+  <div class="info-card"><div class="label">人均预算</div><div class="value">¥2,300 – 2,800（不含返程）</div></div>
 </div>
 <div class="section-head">行程概览</div>
 <div class="day-list">${DAYS.slice(1).map(d=>`<div class="card" onclick="go(${d.id})"><div class="name"><span class="dot" style="background:${d.color}"></span>${d.label} · ${d.title}</div><div class="desc">${d.date}</div></div>`).join('')}</div>
